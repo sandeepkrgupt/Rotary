@@ -1,0 +1,45 @@
+ -----------------------------To Add Remote When You are going to create new branch from Master ------------------------------
+
+ kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git remote -v
+ 
+ kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git remote add upstream ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git
+ 
+ 
+ kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git pull upstream
+
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git pull upstream master
+
+ ------------------------------------ Steps to follow when you create a new branch --------------------------------
+ 
+ kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git checkout master
+ 
+ kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git pull upstream master
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git checkout -b OG-1530
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git add app/shared/data/recurringFrequencies.js
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git commit -m 'PRD Issue: Prevent new subscriptions from getting incorrect schedule Fix'
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git commit -m 'PRD Issue: Prevent new subscriptions from getting incorrect schedule Fix' --no-verify
+
+// To edit commit message
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git commit --amend
+Then make changes on console and then escape key and then :wq (to save changes)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git push origin OG-1530
+
+

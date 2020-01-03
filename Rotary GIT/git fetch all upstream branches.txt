@@ -1,0 +1,16 @@
+C:\work\site---my-rotary\sites\all\modules\custom\rotary_donate_widget\js>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\work\site---my-rotary\sites\all\modules\custom\rotary_donate_widget\js>git branch -d UAT
+Deleted branch UAT (was 6bc87cf70).
+C:\work\site---my-rotary\sites\all\modules\custom\rotary_donate_widget\js>git checkout --track upstream/UAT
+Switched to a new branch 'UAT'
+Branch 'UAT' set up to track remote branch 'UAT' from 'upstream'.
+
+C:\work\site---my-rotary\sites\all\modules\custom\rotary_donate_widget\js>git pull
+Already up to date.
+
+C:\work\site---my-rotary\sites\all\modules\custom\rotary_donate_widget\js>git fetch upstream
+
+C:\work\site---my-rotary\sites\all\modules\custom\rotary_donate_widget\js>

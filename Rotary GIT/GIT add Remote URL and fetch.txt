@@ -1,0 +1,62 @@
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git checkout sandeepkh/OG-1479
+error: Your local changes to the following files would be overwritten by checkout:
+        sites/all/modules/custom/rotary_donate_widget/js/build/main.js
+        sites/all/modules/custom/rotary_donate_widget/js/build/template.ejs
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git stash
+warning: CRLF will be replaced by LF in sites/all/modules/custom/rotary_donate_widget/js/build/main.js.
+The file will have its original line endings in your working directory
+Saved working directory and index state WIP on dpm: dcf495356 BUILD: rotary_donate_widget JS
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git checkout sandeepkh/OG-1479
+Note: switching to 'sandeepkh/OG-1479'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 59cf742eb OG-1479 fixing styling requirements
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js ((59cf742eb...))
+$ git checkout master
+Previous HEAD position was 59cf742eb OG-1479 fixing styling requirements
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git checkout -b OG-1479 sandeepkh/OG-1479
+Switched to a new branch 'OG-1479'
+Branch 'OG-1479' set up to track remote branch 'OG-1479' from 'sandeepkh'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1479)
+$ git pull
+Already up to date.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1479)
+$ git status
+On branch OG-1479
+Your branch is up to date with 'sandeepkh/OG-1479'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   app/components/RaiseNowWidget/logic.js
+
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1479)
+$ git commit -m "OG-1479 DPM: Staff use only for Donations - Recognition fields Bug Fix"

@@ -1,0 +1,18 @@
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git checkout -b OG-1522
+Switched to a new branch 'OG-1522'
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1522)
+$ git remote -v
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1522)
+$ git pull origin OG-1522
+fatal: couldn't find remote ref OG-1522
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1522)
+$ git push origin OG-1522
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1522)
+$ git pull origin OG-1522
+From ssh://bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary
+ * branch                OG-1522    -> FETCH_HEAD
+Already up to date.

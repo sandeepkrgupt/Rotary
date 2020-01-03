@@ -1,0 +1,11 @@
+If you mistakenly accept current changes inplace of upcoming changes follow following steps:-
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git reset --hard
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git checkout master
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git checkout dpm
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git pull
+Already up to date.

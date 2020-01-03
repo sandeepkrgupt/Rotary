@@ -1,0 +1,24 @@
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (OG-1640)
+$ git pull origin OG-1640
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (OG-1640)
+$ git stash 
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (OG-1640)
+$ git commit -m "OG-1640 DPM: Make donate app in DPM work for organizations - State Fix"
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (OG-1640)
+$ git push origin OG-1640
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (OG-1640)
+$ git stash pop
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (OG-1640)
+$ git checkout UAT
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (UAT)
+$ git pull
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (UAT)
+$ yarn build
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (UAT)
+$ git status
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (UAT)
+$ git commit -m "Build DPM ReactJs App"
+/c/work/dpm/src/RI.OnlineGiving.DonationManagement/RI.OnlineGiving.DonationManagement.WebUI/Client (UAT)
+$ git push
+
+Go to Teamcity ->Project -> DPM cloud (click) -> DPM Build -> pending (click) -> your build with your name -> click on green button.

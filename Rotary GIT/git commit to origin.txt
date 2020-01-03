@@ -1,0 +1,69 @@
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git remote -v
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (fetch) (this is your root repo)
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (push)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (fetch)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (push)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git pull origin OG-1542
+fatal: couldn't find remote ref OG-1542
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git branch
+  OG-1507
+  OG-1530
+* OG-1542
+  UAT
+  dpmmaster
+  master
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git pull (it u r in ur branch do git pull only)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git status (goto VS code to stage ur files click add icon button and the do git status)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git commit -m "OG-1542 Staff use only for Donations - Request source and notes" --no-verify
+[OG-1542 31498200b] OG-1542 Staff use only for Donations - Request source and notes
+ Committer: Sandeep Kumar <Sandeep.Kumar@rotary.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 7 files changed, 58 insertions(+), 16 deletions(-)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git push (if u made ur branch from origin/upstream do git push origin OG-1542/ git push upstram OG-1542)
+fatal: The current branch OG-1542 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin OG-1542
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git remote -v (top one is ur current branch)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1542)
+$ git push origin OG-1542
+Enumerating objects: 45, done.
+Counting objects: 100% (45/45), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 2.51 KiB | 429.00 KiB/s, done.
+Total 23 (delta 16), reused 0 (delta 0)
+remote:
+remote: Create pull request for OG-1542:
+remote:   https://bitbucketprd.rotaryintl.org/users/kumarsa/repos/site---my-rotary/compare/commits?sourceBranch=refs/heads/OG-1542
+remote:
+To ssh://bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git
+ * [new branch]          OG-1542 -> OG-1542

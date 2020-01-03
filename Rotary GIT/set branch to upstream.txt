@@ -1,0 +1,61 @@
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git branch -d OG-1544
+error: The branch 'OG-1544' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D OG-1544'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git branch -D OG-1544
+Deleted branch OG-1544 (was 1e3ab8b70).
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git fetch origin
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git push origin --delete OG-1544
+To ssh://bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git
+ - [deleted]             OG-1544
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git checkout OG-1540
+Switched to branch 'OG-1540'
+Your branch is up to date with 'origin/OG-1540'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1540)
+$ git checkout -b OG-1544
+Switched to a new branch 'OG-1544'
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1544)
+$ git push
+fatal: The current branch OG-1544 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin OG-1544
+
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1544)
+$ git push --set-upstream origin OG-1544
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create pull request for OG-1544:
+remote:   https://bitbucketprd.rotaryintl.org/users/kumarsa/repos/site---my-rotary/compare/commits?sourceBranch=refs/heads/OG-1544
+remote:
+To ssh://bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git
+ * [new branch]          OG-1544 -> OG-1544
+Branch 'OG-1544' set up to track remote branch 'OG-1544' from 'origin'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1544)
+$ git checkout upstream
+error: pathspec 'upstream' did not match any file(s) known to git
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1544)
+$
+
+https://www.git-tower.com/learn/git/faq/delete-remote-branch 
+
+
+
+
+
+
+ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git
+ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git

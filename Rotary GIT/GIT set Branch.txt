@@ -1,0 +1,74 @@
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1479)
+you can checkout in any of the above repos.
+> git checkout -b OG-1479 sandeepkh/OG-1479
+==============================================================================================================
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (DPM)
+$ git checkout master
+
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (DPM)
+$ git remote -v
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (fetch)
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (push)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (fetch)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (push)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (DPM)
+$ git checkout --track upstream/dpm
+fatal: 'upstream/dpm' is not a commit and a branch 'dpm' cannot be created from it
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (DPM)
+$ git fetch upstream
+remote: Counting objects: 25, done.
+remote: Compressing objects: 100% (25/25), done.
+remote: Total 25 (delta 15), reused 0 (delta 0)
+Unpacking objects: 100% (25/25), done.
+From ssh://bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary
+ + 6f0d2b15a...3aa53825f DEV              -> upstream/DEV  (forced update)
+ * [new branch]          MRER-347         -> upstream/MRER-347
+ + ed900ac20...ccd843737 QAT              -> upstream/QAT  (forced update)
+ + c75c9ce29...ccd843737 UAT              -> upstream/UAT  (forced update)
+ * [new branch]          dpm              -> upstream/dpm
+ * [new branch]          r/d/2019-10-22   -> upstream/r/d/2019-10-22
+ * [new branch]          reviewed/OG-1473 -> upstream/reviewed/OG-1473
+ * [new branch]          reviewed/OG-1542 -> upstream/reviewed/OG-1542
+ * [new branch]          reviewed/OG-1587 -> upstream/reviewed/OG-1587
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (DPM)
+$ git checkout --track upstream/dpm
+fatal: A branch named 'dpm' already exists.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (DPM)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git branch -d DPM
+warning: deleting branch 'DPM' that has been merged to
+         'refs/remotes/origin/DPM', but not yet merged to HEAD.
+Deleted branch DPM (was 579433213).
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (master)
+$ git checkout --track upstream/dpm
+Switched to a new branch 'dpm'
+Branch 'dpm' set up to track remote branch 'dpm' from 'upstream'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git checkout dpm
+Already on 'dpm'
+Your branch is up to date with 'upstream/dpm'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git log
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git pull
+Already up to date.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ yarn build
+yarn run v1.17.3
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git push
