@@ -1,0 +1,6 @@
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git commit --amend
+Then make changes on console and then escape key and then :wq (to save changes)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1530)
+$ git push origin OG-1530
