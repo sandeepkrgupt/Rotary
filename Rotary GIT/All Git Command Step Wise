@@ -1,0 +1,157 @@
+https://confluenceprd.rotaryintl.org/pages/viewpage.action?pageId=78577776
+
+Skip to end of metadata
+• Created by Tom Wolf, last modified by Gabriel Jacobson on Jul 23, 2019
+Go to start of metadata
+Git Usage
+Initial setup
+Note: For items 1 & 2, please also see the overall Local Development Environment Setup documentation.  You only need to do the steps listed in this section once.
+1. Create a fork from the main repository on BitBucket.
+2. Clone the fork onto your local machine.
+3. Then add Web-communications/myrotary as a remote:
+4. git remote add upstream ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git
+5. To ensure you have the latest code in your local instance pull from the upstream branch (you don't need to worry about the warnings of your origin being outdated)
+6. git checkout master
+7. git pull upstream master
+How to work on stories
+We are using a workflow based loosely on what Atlassian calls the "GitFlow Workflow".  Read about it here.
+Key takeaways:
+• Work in support of bugs or stories is always branched from the master branch (this is called a "feature branch").
+• Any deployed code is merged back to any active release branch as well as the DEV and QA branches when released.
+Rules for git usage:
+8. Never commit, merge, or push to master or QA on the upstream remote (unless you are Merge Master).
+9. When committing, don't use the -a option, it's just asking for trouble.
+10. Do all your work on feature branches named after the JIRA ticket you are working on (e.g., RP-001)
+11. Commit often and use meaningful messages. Do not use the -m option when committing, take advantage of git's editor to write a proper summary and description.
+12. Use the following format as the start of the summary line of each commit: "RP-XXX - Summary" (alternatively, "RP-XXX - name_of_modified_module - Summary")
+13. Feature branches should not be re-used for another story unless that story is directly dependent on the story which was developed in the branch. This includes the QA branch. This rarely happens; we deploy our code each timebox and so the necessary code from the previous story will be available on the master branch, which is where you'll be branching from in the first place.
+Commit messages & Pull Request names:
+It's important to provide a good commit message (or Pull Request name; that becomes  a commit message) so that other developers looking at the repository 2 years later will know both what you did and why you did it.  Note that commit messages and PRs do not need to contain a detailed description of work, but just a high level explanation of what you did and for what ticket. Here are our standards around commit messages and naming PRs.
+Commit messages:
+	RP-001: Summary of work (this should be fairly short).
+	 
+	More detailed notes go here, below a single blank line (note that this is the proper git commit message format and if you commit on the command line without supplying a message, you should get an instance of vim with the appropriate highlighting and wrapping). Neither the blank line nor the additional details are required unless the commit needs it.
+Pull Requests:
+Check that your work will merge cleanly into the destination branch (usually, QA) before you submit a pull request.
+Ensure that you have a clean copy of the QA branch:
+14. $ git branch -D QA # deletes your existing QA branch
+15. $ git fetch # makes sure you are synced with the upstream repository
+16. $ git branch -t QA upstream/QA # creates a new QA branch in your local, which tracks upstream/QA
+Test a merge to the QA branch. Where $my_branch is the name of your feature branch:
+17. $ git checkout QA
+18. $ git merge --no-commit $my_branch
+19. $ git reset --hard # undoes the changes you introduced with the merge
+If there are merge conflicts, try to track them down with these steps. $conflicting_file is the path to a file which has merge conflicts, from your working copy root:
+20. $ git checkout QA
+21. $ git log $conflicting_file # shows you what commits in QA's history have touched the file
+22. Copy a commit ID from the log. Let's call this $commit.
+23. $ git checkout $my_branch
+24. $ git merge --no-commit $commit
+25. If there are conflicts, resolve those conflicts on $my_branch and commit the fixes. Now test merging your feature branch to QA again, as documented above.
+26. If there are no conflicts, reset ($ git reset --hard), and repeat this process, trying a different commit ID.
+Once your feature branch does not have conflicts with your QA branch, you are ready to submit a pull request. (Sometimes, Bitbucket will claim there are merge conflicts in a pull request that has been checked this way. This is a "false conflict", and it is an open issue in Bitbucket.) Here is the extra information you should include when creating a pull request:
+• Title: Use the ticket number and the destination.  For example, for RP-480 going to QA, I'd use "RP-480 >> QA"
+• Description: Here you can include additional detail about the changes. It doesn't hurt to include the ticket number and summary in here (e.g., "RP-480: Create user for GSA to allow search of Brand Center") for additional context.  Node that this should not just be a copy of all the commit messages in the PR, merely a summary of what you did at a high level. Sometimes it's really short. If the pull request shows false conflicts which you can't reproduce by merging to QA in your local environment, mention that here.
+JIRA:
+Keeping JIRA up to date is important during the process of working on a story. This applies both to the state of the story within the agile workflow and the comments.  At the bare minimum a status update on where the current state of the story is should be added as a comment on a daily basis.  It can be very short and it can be the same as what you say on the stand-up, but we keeping the story history accurate is critical.  When beginning work on a story, be certain to change the story status to "In Progress" and when creating a Pull Request, be certain to change the status to "Ready for QA" (leave it assigned to you, however; the Merge Master will assign the story to themselves when they pick it up for review).  Status changes can be made either directly on the story or using drag-and-drop on the Agile Board (the column titles on the board may have titles which are different than the status).
+
+Example workflow for a new JIRA ticket RP-001 "Example story":
+27. Review the entire story and identify any missing information (e.g., designs, content, tech approach)
+28. If anything is missing, put a comment on the story in JIRA mentioning the people who need to provide the information, flag the story in JIRA, and bring the issue up at the next stand-up. If work cannot continue, raise the issue immediately to the BSA & TC/Dev Lead
+29. Change status of RP-001 in JIRA to "In Progress"
+30. git checkout master
+31. This switches your current branch to master.
+32. git pull upstream master
+33. This updates master to the current state from main repository. You probably won't need to do this every time since we typically only deploy every two weeks.
+34. git checkout -b RP-001
+35. This creates a new branch, starting at the current HEAD of master, named RP-001. Omit the -b option if you previously worked on this branch.
+36. NOTE: If you are resuming work on an unreleased story (e.g., you or someone else already issued a pull request, but the story failed QA or UAT), please make sure to continue work from the same branch.
+37. If you are resuming work on a story which was released, please make sure to branch from master when starting the work, even if you had a previously active branch for the same story.
+38. Make your code changes
+39. Change code
+40. git add name/of/file.php
+41. git commit (be sure to add a meaningful summary; see above)
+42. Repeat steps a - d until done.
+43. Check to see if your changes require updating any Features (e.g., an update to Views, Features, CTools, or any adjustments to configuration we manage in Features)
+44. Run your code through the Coder module to help ensure your code adheres to our coding standards.
+45. Get the latest DEV branch from upstream:
+46. git fetch upstream
+47. git branch -D DEV (this might not be needed if you dont have DEV branch on your local already)
+48. git branch DEV upstream/DEV
+49. git checkout DEV
+50. git merge RP-001
+51. Resolve any merge conflicts
+52. git push upstream DEV
+53. Watch #datastream channel on Slack for "Deploy of DEV to wwwdev completed."
+54. Test functionality on wwwdev
+55. If everything works as anticipated, proceed to next step
+56. If something breaks, repeat steps 4-10
+57. git push origin RP-001
+58. This sends your new code up to your repository on BitBucket.
+59. Issue a pull request from your RP-001 (your branch) your fork on BitBucket to the QA branch on the main repository
+60. Name the pull request "RP-100 >> QA"
+61. Make sure the pull request is to the main repository (web-communication/myrotary) on the QA branch
+62. Add additional details about the nature of the change to the description of the pull request
+63. This is how the the code makes it back into the main codebase.
+64. If you need to have a module enabled or something like that, this is a "deploy override" and should be added to the description of the story or the comments on the Pull Request.  We express these as drush commands if they can be (e.g., "drush en rotary_new_module" or "configure the node which will be displayed above the form at admin/config/rotary/new-module").
+65. Change the status on the JIRA ticket to "Ready for QA" and add a comment indicating that you have created the Pull Request.
+66. Review the testing instructions on the JIRA ticket and ensure that they are accurate. Update them as needed (right in the description).
+
+Collaborating directly another developer
+67. On your development machine, add the other developer's repository as a remote
+68. git remote add tom git@bitbucket.org:t_dub/rotary.git   (where tom = an alias for the developer you're working with, and t_dub = their bitbucket username)
+69. NOTE: You will only ever have to do this once per developer, even if you collaborate with them on multiple tickets
+70. Create a branch named after the ticket you are working on
+71. git branch RP-100 master
+72. NOTE: You will only have to do this once per ticket
+73. Checkout that branch
+74. git checkout RP-100
+75. Pull in any work the other developer has done (if they have already started)
+76. git pull tom RP-100
+77. NOTE: Ideally, this should be a "fast-forward" merge. If everything has gone correctly, you will just be "catching up" to the other developer's work, not really merging anything new.
+78. Do whatever work you need to do on the branch
+79. Work
+80. git add name/of/file.php
+81. git commit
+82. Repeat
+83. Send your branch up to BitBucket for the other developer to work on
+84. git push origin RP-100
+85. Update the JIRA ticket explaining what you have done and that the other developer can pull in your latest changes.
+ 
+Handling merge conflicts as a TC
+This process can only be followed by users who have write access to the upstream deployment branches.
+The first 4 steps assume you are handling a conflict for a branch on a developer's repo and not your own. If the branch is already in your local repo because it is your code, you can skip those steps.
+Note: You will need at least "read" access to the developer's repo.
+- Set up the developer's branch as a remote (swap chetan & chetanpadsalgi for the appropriate alias & username)
+git remote add chetan git@bitbucket.org:chetanpadsalgi/rotary.git
+- Fetch their repo
+git fetch chetan
+- On the odd chance that you already have a local branch named after the one you're about to manage, delete it. (swap RP-1220 for the feature branch name)
+git branch -D RP-1220
+- Set up a local branch tracking their remote (swap RP-1220 & chetan for the appropriate feature branch & alias)
+git branch RP-1220 chetan/RP-1220
+- Fetch upstream
+git fetch upstream
+- Delete your local copy of whatever deployment branch you are merging to (replace QA with destination branch if needed)
+git branch -D QA
+- Set up a new local deployment branch tracking upstream
+git branch QA upstream/QA
+- Checkout your deployment branch
+git checkout QA
+- Make sure your working directory is clean
+git status
+- If needed, reset your local working directory to clean it up
+git reset --hard
+- Attempt to merge in the feature branch (swap RP-1220 for your feature branch name)
+git merge RP-1220
+Sometimes even though bitbucket indicated there are conflicts, there will be none. If this is the case, skip the next step
+- Run the git mergetool and resolve the conflicts using a diff tool. The tool used will vary based on your system, so will not be covered here.
+git mergetool
+- Manually verify that the conflict resolution properly modified the conflicting files. You can do this via viewing the commit diff or opening the file in a text editor.
+- Assuming your diff tool has resolved all conflicts, commit the merge. Since this is a merge, the commit will already have a message set, all you need to do is accept the default message.
+git commit
+- Push your deployment branch back to upstream
+git push upstream QA
+- If the mergetool was used, there will be .orig files matching the files modified by the mergetool. Delete them to clean up your working directory.
+
+From <https://confluenceprd.rotaryintl.org/pages/viewpage.action?pageId=78577776#space-menu-link-content>
