@@ -1,0 +1,7 @@
+If you do 
+> git reset --hard HEAD 
+> git reset --hard <SOME-COMMIT>  , SOME-COMMIT = Yuor commit ID which you can get by "git log"
+then Git will:
+
+Make your current branch (typically master) back to point at <SOME-COMMIT>.
+Then make the files in your working tree and the index ("staging area") the same as the versions committed in <SOME-COMMIT>.
