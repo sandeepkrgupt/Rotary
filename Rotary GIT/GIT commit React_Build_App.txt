@@ -1,0 +1,25 @@
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git fetch upstream
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git pull
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ yarn build
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git commit -m "BUILD: Rotary Donate widget React JS App" --no-verify
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git remote -v
+Aamir   ssh://git@bitbucketprd.rotaryintl.org:7999/~aamirs/site---my-rotary.git (fetch)
+Aamir   ssh://git@bitbucketprd.rotaryintl.org:7999/~aamirs/site---my-rotary.git (push)
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (fetch)
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (push)
+sandeepkh       ssh://git@bitbucketprd.rotaryintl.org:7999/~khandews/site---my-rotary.git (fetch)
+sandeepkh       ssh://git@bitbucketprd.rotaryintl.org:7999/~khandews/site---my-rotary.git (push)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (fetch)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (push)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git push upstream dpm

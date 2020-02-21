@@ -1,0 +1,98 @@
+GIT Fetch Other Developer Branch
+------------------------------------------
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1612)
+$ git stash
+warning: CRLF will be replaced by LF in sites/all/modules/custom/rotary_donate_widget/js/build/main.js.
+The file will have its original line endings in your working directory
+Saved working directory and index state WIP on OG-1612: 7741db219 Build Rotary Donate Widget React JS App
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1612)
+$ git checkout OG-1680
+error: pathspec 'OG-1680' did not match any file(s) known to git
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1612)
+$ git checkout dpm
+Switched to branch 'dpm'
+Your branch is up to date with 'upstream/dpm'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git branch --list
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git remote -v
+Aamir   ssh://git@bitbucketprd.rotaryintl.org:7999/~aamirs/site---my-rotary.git (fetch)
+Aamir   ssh://git@bitbucketprd.rotaryintl.org:7999/~aamirs/site---my-rotary.git (push)
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (fetch)
+origin  ssh://git@bitbucketprd.rotaryintl.org:7999/~kumarsa/site---my-rotary.git (push)
+sandeepkh       ssh://git@bitbucketprd.rotaryintl.org:7999/~khandews/site---my-rotary.git (fetch)
+sandeepkh       ssh://git@bitbucketprd.rotaryintl.org:7999/~khandews/site---my-rotary.git (push)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (fetch)
+upstream        ssh://git@bitbucketprd.rotaryintl.org:7999/wc/site---my-rotary.git (push)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git fetch Aamir/OG-1680
+fatal: 'Aamir/OG-1680' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git fetch Aamir
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git checkout Aamir/OG-1680
+Note: switching to 'Aamir/OG-1680'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 131e66a29 OG-1680 Removed comment
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js ((131e66a29...))
+$ git checkout dpm
+Previous HEAD position was 131e66a29 OG-1680 Removed comment
+Switched to branch 'dpm'
+Your branch is up to date with 'upstream/dpm'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (dpm)
+$ git checkout --track Aamir/OG-1680
+Switched to a new branch 'OG-1680'
+Branch 'OG-1680' set up to track remote branch 'OG-1680' from 'Aamir'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1680)
+$ git log
+commit 131e66a2978e86a01277b62c9c87eb830b290553 (HEAD -> OG-1680, Aamir/OG-1680)
+Author: Shoeb Aamir <Shoeb.Aamir@rotary.org>
+Date:   Fri Feb 7 20:59:22 2020 +0530
+
+    OG-1680 Removed comment
+
+commit 53ab1038c75a9ac80da1293334af6cebe7b3a60e
+Author: Shoeb Aamir <Shoeb.Aamir@rotary.org>
+Date:   Fri Feb 7 20:45:16 2020 +0530
+
+    OG-1680 Removed console message
+
+commit d1dfb22a1ed50a0f697208d90dd7416c7f4f3ed0
+Author: Shoeb Aamir <Shoeb.Aamir@rotary.org>
+Date:   Fri Feb 7 20:43:11 2020 +0530
+
+    OG-1680 Added logic for country based on ip
+
+commit 4ede49363b6e1cfbd760838466bac489e5a7bbab (upstream/dpm, Aamir/dpm, dpm)
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-1680)
+$
