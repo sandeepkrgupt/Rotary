@@ -1,0 +1,23 @@
+import React from 'react';
+import { FormControlLabel } from 'material-ui/Form';
+import Checkbox from '../../../StaffUseOnly/checkbox';
+
+const OverrideCreditOrgCheckbox = ({
+  overrideCreditOrgVisibility,
+  toggelOverrideCreditOrgVisibility
+}) => {
+  return (
+    <FormControlLabel
+      control={
+        <Checkbox
+          id="OverrideCreditOrg"
+          checked={overrideCreditOrgVisibility}
+          onChange={toggelOverrideCreditOrgVisibility}
+        />
+      }
+      label="Override credit org"
+    />
+  );
+}
+
+export default OverrideCreditOrgCheckbox;
