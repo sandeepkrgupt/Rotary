@@ -1,0 +1,21 @@
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-2959-React)
+$ git  fetch Aamir
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-2959-R-React)
+$ git checkout --track Aamir/OG-2959
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-2959)
+$ git merge OG-2959-React
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-2959)
+$ git push
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-2959)
+$ git remote -v
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (OG-2959)
+$ git checkout --track Aamir/integration/OG-2852+OG-2959
+Switched to a new branch 'integration/OG-2852+OG-2959'
+Branch 'integration/OG-2852+OG-2959' set up to track remote branch 'integration/OG-2852+OG-2959' from 'Aamir'.
+
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (integration/OG-2852+OG-2959)
+$ git merge OG-2959
+kumarsa@L10ASO-PF1SH4QL MINGW64 /c/work/site---my-rotary/sites/all/modules/custom/rotary_donate_widget/js (integration/OG-2852+OG-29integration/OG-2852+OG-2959)
+$ git push
