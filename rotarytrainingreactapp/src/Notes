@@ -1,0 +1,3 @@
+> npm install typescript -g
+>npx create-react-app app_name --typescript
+>
