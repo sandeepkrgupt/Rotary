@@ -3,7 +3,7 @@ import { PModel } from './product.model';
 
 interface IProdProps {
 	producrDetails: PModel
-	deleteHandler: (theId: number) => void // initialize func as void
+	deleteHandler: (theId: number) => void // initialize func as void return type
 }
 interface IProdState {
 	likecount: number
