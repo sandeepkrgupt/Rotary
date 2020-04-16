@@ -1,0 +1,52 @@
+[
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "MI",
+      "price":9900,
+      "imageUrl":"https://images.samsung.com/is/image/samsung/in-qledtv-q60r-qa49q60rakxxl-frontblack-152405789?$PD_GALLERY_L_JPG$",
+      "description": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt",
+      "likes":0,
+      "rating":0
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "Samsung",
+      "price":1000,
+      "imageUrl":"https://imgaz.staticbg.com/thumb/large/oaupload/ser1/banggood/images/99/6C/44f193a0-eced-41e4-ba78-226d7b3b25f8.jpg",
+      "description": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil.",
+      "likes":0,
+      "rating":0
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "LG",
+      "price":20000,
+      "imageUrl":"https://www.lg.com/in/images/tvs/md06117956/gallery/01-1100-V01.jpg",
+     "description": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae",
+      "likes":0,
+      "rating":0
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "Sony",
+      "price":30000,
+      "imageUrl":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6363/6363879_sd.jpg",
+      "description": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt.",
+      "likes":0,
+      "rating":0
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "title": "Sausui",
+      "price":80000,
+      "imageUrl":"https://rukminim1.flixcart.com/image/704/704/television/s/y/z/samsung-24k4100-original-imaemk4xbggzcvsh.jpeg?q=70",
+      "description": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt.",
+      "likes":30,
+      "rating":10
+    }
+  ]
