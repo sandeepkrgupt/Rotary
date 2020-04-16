@@ -1,1 +1,3 @@
+>npm install typescript -g
+>npx create-react-app rotarytrainingreactapp --template typescript
 >yarn add axios --save
