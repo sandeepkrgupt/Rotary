@@ -5,15 +5,19 @@ const INCREMENT_LIKES_PRODUCT = 'INCREMENT_LIKES_PRODUCT'
 const DELETE_PRODUCT = 'DELETE_PRODUCT'
 const ADD_PRODUCT = 'ADD_PRODUCT'
 const Fetch_Data = 'Fetch_Data'
-export function IncreseLike (theId:number ) { //IncreseLike should be same as in ListOfProductComponent.tsx
+
+export function IncreseLike (theIdOfPdtLiked:number ) { 
+//IncreseLike should be same as in ListOfProductComponent.tsx
     return {
-        type: INCREMENT_LIKES_PRODUCT, theId
+        type: INCREMENT_LIKES_PRODUCT, theIdOfPdtLiked
+        // OR payload : theId
     }
 }
 
-export function deleteSelectedProduct (theId:number) {
+export function deleteSelectedProduct (theIdOfPdtToDelete:number) {
     return {
-        type: DELETE_PRODUCT, theId
+        type: DELETE_PRODUCT, 
+        payload: theIdOfPdtToDelete
     }
 }
 
@@ -23,8 +27,9 @@ export function addProduct ( ) {
     }
 }
 
-export function FetchData ( response:PModel) {
+export function FetchData ( responseProductData:PModel) {
     return {
-        type: Fetch_Data, response
+        type: Fetch_Data, 
+        payload: responseProductData
     }
 }
