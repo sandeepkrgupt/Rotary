@@ -13,7 +13,7 @@ function mapStateToProps(storeDataFromProvider:any) {
 function mapDispatchToProps(dispatcher:Dispatch) {
 return bindActionCreators(AllActions, dispatcher)
 }
-export var WrapperApp = connect(mapStateToProps, mapDispatchToProps)(App); // this is same as below
+export var WrapperApp = connect(mapStateToProps, mapDispatchToProps)(App); // this is same as below // HOC
 {/* 
 function X() {
     return function (a) {
