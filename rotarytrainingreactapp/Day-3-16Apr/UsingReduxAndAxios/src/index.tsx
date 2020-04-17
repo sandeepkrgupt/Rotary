@@ -7,6 +7,10 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import {WrapperApp} from './components/connect';
+/**
+=> Provider provide a way to communicate React with Redux.Provider gets data from store
+ and make available to connect(). 
+ **/
 var mainApp = <Provider store={store}>
   <WrapperApp/>
 </Provider>

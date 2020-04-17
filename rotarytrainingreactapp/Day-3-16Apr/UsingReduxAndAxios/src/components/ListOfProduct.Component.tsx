@@ -19,10 +19,10 @@ export default class ListOfProduct extends React.Component<any, {}> { // first a
 				key={c.id}
 				producrDetails={c}
 				incrementLikeCount={
-					(theId: number) => this.props.IncreseLike(theId) //IncreseLike should be same as in action.ts
+					(incrementLikeId: number) => this.props.IncreseLike(incrementLikeId) //IncreseLike should be same as in action.ts
 				}
 				deleteProduct={
-					(theId: number) => this.props.deleteSelectedProduct(theId) // this is an action for redux
+					(delPdtId: number) => this.props.deleteSelectedProduct(delPdtId) // this is an action for redux
 				} />)
 		// {...this.props} Pass every thing to Product Comp directly
 		return (

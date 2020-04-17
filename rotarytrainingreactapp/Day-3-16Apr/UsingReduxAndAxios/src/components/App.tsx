@@ -5,15 +5,16 @@ import Product from './product.component';
 import { PModel } from '../product.model';
 import ListOfProduct from './ListOfProduct.Component';
 import PostRequestcall from '../ajax.request';
-
 import ProductFooter from './Footer.Component';
+
 class AppOne extends React.Component {
   render() {
     return (
       <div className="App">
         <hr />
         {/* <PostRequestcall /> */}
-        <ListOfProduct {...this.props} />
+        {/* Passing all data and Actions(functions/Methods) getting from Redux */}
+        <ListOfProduct {...this.props} /> 
         <ProductFooter />
       </div>
     );

@@ -13,7 +13,12 @@ function mapStateToProps(storeDataFromProvider:any) {
 function mapDispatchToProps(dispatcher:Dispatch) {
 return bindActionCreators(AllActions, dispatcher)
 }
+/**
+=> It is used to have store exposed as props to application and provide all the actions as well
+**/
 export var WrapperApp = connect(mapStateToProps, mapDispatchToProps)(RotaryProductApp); // this is same as below
+
+
 {/* 
 function X() {
     return function (a) {
