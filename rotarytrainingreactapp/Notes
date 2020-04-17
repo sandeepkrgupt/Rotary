@@ -8,4 +8,4 @@
 
 
 --------------- 
-1. index.tsx or index.js is the entery point of any application, So pass your store inside index.tsx
+1. index.tsx or index.js is the entry point of any application, So pass your store inside index.tsx
