@@ -1,9 +1,7 @@
 import { createStore } from 'redux';
 import { rootReducer } from '../reducers/combine.reducer'
 var initialStoreData: any = {
-  products: [
-
-  ],
+  products: [],
   posts: []
 }
 
