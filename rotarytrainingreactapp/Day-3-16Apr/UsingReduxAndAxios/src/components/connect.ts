@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {Dispatch, bindActionCreators} from 'redux';
-import App from './App';
+import RotaryProductApp from './App'; //Comp exported as default can be imported with any name
 import * as AllActions from '../actions/action';
 
 function mapStateToProps(storeDataFromProvider:any) {
@@ -13,7 +13,7 @@ function mapStateToProps(storeDataFromProvider:any) {
 function mapDispatchToProps(dispatcher:Dispatch) {
 return bindActionCreators(AllActions, dispatcher)
 }
-export var WrapperApp = connect(mapStateToProps, mapDispatchToProps)(App); // this is same as below
+export var WrapperApp = connect(mapStateToProps, mapDispatchToProps)(RotaryProductApp); // this is same as below
 {/* 
 function X() {
     return function (a) {
