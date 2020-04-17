@@ -3,3 +3,9 @@
 >yarn add axios --save
 >npm install redux --save
 >npm install @types/react-redux
+
+
+
+
+--------------- 
+1. index.tsx or index.js is the entery point of any application, So pass your store inside index.tsx
