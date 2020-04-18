@@ -1,0 +1,5 @@
+>npm install apollo-server-express express --save
+>npm install nodemon --save-dev -g
+to run ur file
+>nodemon file_name.ext
+>npm install apollo-boost graphql react-apollo --save
